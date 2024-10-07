@@ -1,4 +1,5 @@
 import random
+import csv
 from copy import deepcopy
 from dataclasses import dataclass
 
@@ -19,55 +20,57 @@ class Group:
     teachers: list
 
 
-# -------------- create groups, students, and teachers --------------
+# -------------- helper functions for CSV import/export ----------------------
 
-# hours and teachers go in order: [english, history, math, science, literature, arts]
-groups_hours = {
-    "1A": [2, 5, 2, 0, 6, 3],
-    "1B": [4, 2, 0, 0, 3, 3],
-    "1C": [2, 0, 2, 3, 2, 2],
-    "1D": [0, 0, 2, 5, 0, 1],
-}
-
-groups_students = {
-    "1A": 28,
-    "1B": 22,
-    "1C": 30,
-    "1D": 18,
-}
-
-teachers = [
-    Teacher("bob", 7, ["english", "history"]),
-    Teacher("alice", 7, ["english", "history", "arts"]),
-    Teacher("victor", 5, ["math", "science"]),
-    Teacher("jane", 11, ["arts", "literature"]),
-    Teacher("james", 7, ["literature"]),
-    Teacher("john", 8, ["english"]),
-    Teacher("sarah", 4, ["math", "science"]),
-    Teacher("mike", 14, ["math"]),
-    Teacher("sam", 4, ["science"]),
-]
-
-auditoriums = {
-    "A1": 30,
-    "A2": 25,
-    "A3": 35,
-    "A4": 20,
-}
-
-# ----------- create helpful data structures -------------
-
-subjects_raw = ["english", "history", "math", "science", "literature", "arts"]
-subjects2teachers = {}
-
-for subject in subjects_raw:
-    subjects2teachers[subject] = []
-    for teacher in teachers:
-        if subject in teacher.classes:
-            subjects2teachers[subject].append(teacher.name)
+def load_groups_hours(file_name):
+    groups_hours = {}
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row in reader:
+            groups_hours[row[0]] = list(map(int, row[1:]))
+    return groups_hours
 
 
-# ----------- helper functions for constraints -------------
+def load_groups_students(file_name):
+    groups_students = {}
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row in reader:
+            groups_students[row[0]] = int(row[1])
+    return groups_students
+
+
+def load_teachers(file_name):
+    teachers = []
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row in reader:
+            teachers.append(Teacher(row[0], int(row[1]), row[2].split(',')))
+    return teachers
+
+
+def load_auditoriums(file_name):
+    auditoriums = {}
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row in reader:
+            auditoriums[row[0]] = int(row[1])
+    return auditoriums
+
+
+def export_schedule_to_csv(schedule, file_name):
+    with open(file_name, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Group', 'English', 'History', 'Math', 'Science', 'Literature', 'Arts'])
+        for group_id, group_schedule in zip(groups_hours.keys(), schedule):
+            writer.writerow([group_id] + group_schedule)
+
+
+# -------------- helper functions for constraints ----------------------
 
 def is_teacher_available(teacher, subject_index, schedule):
     """
@@ -104,21 +107,26 @@ def create_schedule(max_attempts=100):
     for group_id in groups_hours:
         teachers_for_group = []
         for subject_index, subject in enumerate(subjects_raw):
-            subject_teachers = subjects2teachers[subject]
+            subject_teachers = subjects2teachers.get(subject, [])
             available_teachers = [
                 teacher for teacher in subject_teachers
                 if is_teacher_available(teacher, subject_index, schedule)
             ]
             if not available_teachers:
-                # Не знайдено доступного викладача, додаємо випадкового викладача (можна змінити логіку)
-                print(
-                    f"Warning: No available teachers for subject '{subject}' in group '{group_id}' at time slot {subject_index}. Assigning randomly.")
-                teacher = random.choice(subject_teachers)
+                if subject_teachers:
+                    # Якщо є викладачі для предмета, але вони зайняті — вибираємо випадкового
+                    print(
+                        f"Warning: No available teachers for subject '{subject}' in group '{group_id}' at time slot {subject_index}. Assigning randomly.")
+                    teacher = random.choice(subject_teachers)
+                else:
+                    # Якщо немає викладачів для предмета, обробляємо це як критичну помилку або повідомляємо
+                    raise ValueError(f"No teachers assigned for subject '{subject}' in group '{group_id}'")
             else:
                 teacher = random.choice(available_teachers)
             teachers_for_group.append(teacher)
         schedule.append(teachers_for_group)
     return schedule
+
 
 
 def evaluate(schedule):
@@ -134,7 +142,6 @@ def evaluate(schedule):
                 score += hours
                 teacher_hours[group_teacher] -= hours
 
-    # Враховуємо штраф за "вікна"
     score -= evaluate_windows(schedule)
 
     return score
@@ -150,7 +157,6 @@ def create_population(population_size=16):
 
 def competition(population):
     new_population = []
-    # Парування сусідніх індивідів
     for i in range(0, len(population) - 1, 2):
         schedule1 = population[i]
         schedule2 = population[i + 1]
@@ -177,7 +183,7 @@ def crossover(population):
     return population
 
 
-def mutation(population, mutation_rate=0.3):  # Збільшено ймовірність мутацій
+def mutation(population, mutation_rate=0.3):
     local_population = deepcopy(population)
     for schedule in local_population:
         for group_id, group in zip(groups_hours.keys(), schedule):
@@ -192,9 +198,8 @@ def mutation(population, mutation_rate=0.3):  # Збільшено ймовір�
                     if available_teachers:
                         new_teacher = random.choice(available_teachers)
                     else:
-                        # Якщо немає доступних викладачів, залишаємо поточного
                         new_teacher = group[i]
-                    group[i] = new_teacher  # Змінюємо викладача в групі
+                    group[i] = new_teacher
     return local_population
 
 
@@ -203,8 +208,7 @@ def generic_step(population):
     print(f"Generation step - Best score: {local_best_score}, Average score: {local_average}")
     population = competition(population)
     population = crossover(population)
-    population = mutation(population, 0.3)  # Збільшена ймовірність мутації
-    # Додаємо найкращий розклад назад до популяції
+    population = mutation(population, 0.3)
     if local_best_schedule not in population:
         population.append(local_best_schedule)
     return population
@@ -247,28 +251,35 @@ def print_schedule(schedule):
 # -------------- main code ----------------------
 
 if __name__ == '__main__':
-    print(f"best possible score: {get_max_score()}")
+    # Load data from CSV files
+    groups_hours = load_groups_hours('groups_hours.csv')
+    groups_students = load_groups_students('groups_students.csv')
+    teachers = load_teachers('teachers.csv')
+    auditoriums = load_auditoriums('auditoriums.csv')
 
-    # Генетичний алгоритм
+    # Create subjects to teachers mapping
+    subjects_raw = ["english", "history", "math", "science", "literature", "arts"]
+    subjects2teachers = {}
+    for subject in subjects_raw:
+        subjects2teachers[subject] = []
+        for teacher in teachers:
+            if subject in teacher.classes:
+                subjects2teachers[subject].append(teacher.name)
+
+    print(f"Best possible score: {get_max_score()}")
+
+    # Run genetic algorithm
     population_test = genetic_algorithm(128, 100)
 
-    # Створення початкової популяції
-    population_simple = create_population(128)
-
-    # Оцінка популяції після генетичного алгоритму
+    # Evaluate population after genetic algorithm
     best_score, average_score, best_schedule = evaluate_population(population_test)
 
-    # Оцінка початкової популяції
-    best_score_simple, average_score_simple, best_schedule_simple = evaluate_population(population_simple)
+    # Export the best schedule to CSV
+    export_schedule_to_csv(best_schedule, 'best_schedule.csv')
 
-    # Виведення результату
-    print("-----best schedule from genetic algorithm-----")
+    # Print the best schedule
+    print("----- Best schedule from genetic algorithm -----")
     print_schedule(best_schedule)
 
-    print("-----genetic algorithm-----")
-    print(f"@@@@ average score: {average_score}")
-    print(f"@@@@ best score: {best_score}")
-
-    print("-----simple population-----")
-    print(f"@@@@ average score: {average_score_simple}")
-    print(f"@@@@ best score: {best_score_simple}")
+    print(f"Average score: {average_score}")
+    print(f"Best score: {best_score}")
