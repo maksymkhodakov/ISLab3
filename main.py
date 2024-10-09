@@ -128,7 +128,6 @@ def create_schedule(max_attempts=100):
     return schedule
 
 
-
 def evaluate(schedule):
     teacher_hours = {teacher.name: teacher.max_hours for teacher in teachers}
     score = 0
