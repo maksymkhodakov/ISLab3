@@ -323,6 +323,20 @@ def print_schedule(schedule, lecturers):
         print()
 
 
+# Клас для дублювання stdout
+class Tee(object):
+    def __init__(self, *files):
+        self.files = files
+
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+
+    def flush(self):
+        for f in self.files:
+            f.flush()
+
+
 def main():
     # Завантажуємо дані
     groups = file_processor.load_groups('groups.csv')
@@ -332,8 +346,16 @@ def main():
 
     # Запускаємо генетичний алгоритм
     best_schedule = genetic_algorithm(groups, subjects, lecturers, auditoriums)
-    print("\nBest schedule:\n")
-    print_schedule(best_schedule, lecturers)
+
+    # Виводимо розклад і записуємо його у файл
+    with open('schedule_output.txt', 'w', encoding='utf-8') as f:
+        original_stdout = sys.stdout
+        sys.stdout = Tee(sys.stdout, f)
+        try:
+            print("\nBest schedule:\n")
+            print_schedule(best_schedule, lecturers)
+        finally:
+            sys.stdout = original_stdout
 
 
 # Основна функція

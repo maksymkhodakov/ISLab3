@@ -1,0 +1,503 @@
+
+Best schedule:
+
+Парний - day 1, lesson 1:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A4
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A1
+
+Парний - day 1, lesson 2:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A3
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A3
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A3
+
+Парний - day 1, lesson 3:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A3
+
+Парний - day 1, lesson 4:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A3
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A3
+
+Парний - day 2, lesson 1:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A4
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+
+Парний - day 2, lesson 2:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+
+Парний - day 2, lesson 3:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A1
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A2
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A4
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A2
+
+Парний - day 2, lesson 4:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A1
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A3
+
+Парний - day 3, lesson 1:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A1
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A3
+
+Парний - day 3, lesson 2:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A3
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A3
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A3
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A3
+
+Парний - day 3, lesson 3:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A3
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A2
+
+Парний - day 3, lesson 4:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A4
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A4
+
+Парний - day 4, lesson 1:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+
+Парний - day 4, lesson 2:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A4
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+
+Парний - day 4, lesson 3:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A3
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+
+Парний - day 4, lesson 4:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A5
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A4
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+
+Парний - day 5, lesson 1:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A1
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A4
+
+Парний - day 5, lesson 2:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A3
+
+Парний - day 5, lesson 3:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+
+Парний - day 5, lesson 4:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A4
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A1
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A2
+
+Непарний - day 1, lesson 1:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A3
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A3
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A5
+
+Непарний - day 1, lesson 2:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+
+Непарний - day 1, lesson 3:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+
+Непарний - day 1, lesson 4:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A3
+
+Непарний - day 2, lesson 1:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A3
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A1
+
+Непарний - day 2, lesson 2:
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A4
+
+Непарний - day 2, lesson 3:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A1
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+
+Непарний - day 2, lesson 4:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A1
+
+Непарний - day 3, lesson 1:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A3
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A1
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A3
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A3
+
+Непарний - day 3, lesson 2:
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A2
+
+Непарний - day 3, lesson 3:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A4
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A4
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A2
+
+Непарний - day 3, lesson 4:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A4
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A3
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A3
+
+Непарний - day 4, lesson 1:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A3
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A2
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A2
+
+Непарний - day 4, lesson 2:
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A4
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A4
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A4
+
+Непарний - day 4, lesson 3:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A3
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A5
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A1
+
+Непарний - day 4, lesson 4:
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A1
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A2
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A3
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A5
+
+Непарний - day 5, lesson 1:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A3
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A4
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A4
+  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A2
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A1
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A2
+  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A1
+
+Непарний - day 5, lesson 2:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A3
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A5
+  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A3
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A2
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A3
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A5
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Ткаченко О.М., auditorium: A1
+
+Непарний - day 5, lesson 3:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A2
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A4
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A1
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A2
+  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A2
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A4
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A1
+
+Непарний - day 5, lesson 4:
+  Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A3
+  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A5
+  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A2
+  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A1
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A1
+  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A5
+  Group: TK-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A1
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A4
+  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A3
+  Group: MI-42, Розробка ПЗ під мобільні платформи (Лекція), Teacher: Шишацька О.В., auditorium: A1
+  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A4
+
