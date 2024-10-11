@@ -1,6 +1,17 @@
 import csv
 
 
+# Завантаження аудиторій
+def load_auditoriums(filename):
+    auditoriums = {}
+    with open(filename, newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            auditorium_id = row['auditoriumID']
+            auditoriums[auditorium_id] = int(row['capacity'])
+    return auditoriums
+
+
 # Завантаження груп
 def load_groups(filename):
     groups = {}
@@ -47,14 +58,3 @@ def load_lecturers(filename):
                 'MaxHoursPerWeek': int(row['maxHoursPerWeek'])
             }
     return lecturers
-
-
-# Завантаження аудиторій
-def load_auditoriums(filename):
-    auditoriums = {}
-    with open(filename, newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            auditorium_id = row['auditoriumID']
-            auditoriums[auditorium_id] = int(row['capacity'])
-    return auditoriums
