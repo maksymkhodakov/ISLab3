@@ -6,28 +6,55 @@ import randomizer  # Імпортуємо модуль для генерації
 from genetic_algo import genetic_algorithm, TIMESLOTS  # Імпортуємо генетичний алгоритм та часові слоти з модуля genetic_algo
 
 
-# Функція для виведення розкладу
-def print_schedule(schedule, lecturers):
+# Функція для виведення розкладу з додатковою інформацією
+def print_schedule(schedule, lecturers, groups, auditoriums):
     schedule_dict = {}  # Створюємо словник для зберігання подій за часовими слотами
     for event in schedule.events:
         if event.timeslot not in schedule_dict:
             schedule_dict[event.timeslot] = []  # Ініціалізуємо список подій для нового часовго слота
         schedule_dict[event.timeslot].append(event)  # Додаємо подію до відповідного часовго слота
 
+    # Словник для підрахунку годин викладачів
+    lecturer_hours = {lecturer_id: 0 for lecturer_id in lecturers}
+
     for timeslot in TIMESLOTS:
         print(f"{timeslot}:")  # Виводимо часовий слот
         if timeslot in schedule_dict:
             for event in schedule_dict[timeslot]:
                 # Формуємо інформацію про групи, включаючи підгрупи, якщо вони є
-                group_info = ', '.join([f"Group: {gid}" + (
-                    f" (Subgroup {event.subgroup_ids[gid]})" if event.subgroup_ids and gid in event.subgroup_ids else '')
-                                        for gid in event.group_ids])
-                # Виводимо інформацію про подію: групи, предмет, тип заняття, викладача та аудиторію
+                group_info = ', '.join([
+                    f"Group: {gid}" + (
+                        f" (Subgroup {event.subgroup_ids[gid]})" if event.subgroup_ids and gid in event.subgroup_ids else ''
+                    )
+                    for gid in event.group_ids
+                ])
+                # Обчислюємо кількість студентів у події
+                total_students = sum(
+                    groups[gid]['NumStudents'] // 2 if event.subgroup_ids and gid in event.subgroup_ids else
+                    groups[gid]['NumStudents']
+                    for gid in event.group_ids
+                )
+                # Отримуємо місткість аудиторії
+                auditorium_capacity = auditoriums[event.auditorium_id]
+
+                # Виводимо інформацію про подію: групи, предмет, тип заняття, викладача, аудиторію, кількість
+                # студентів та місткість аудиторії
                 print(f"  {group_info}, {event.subject_name} ({event.event_type}), "
-                      f"Teacher: {lecturers[event.lecturer_id]['LecturerName']}, auditorium: {event.auditorium_id}")
+                      f"Teacher: {lecturers[event.lecturer_id]['LecturerName']}, "
+                      f"auditorium: {event.auditorium_id} "
+                      f"(Students: {total_students}, Capacity: {auditorium_capacity})")
+
+                # Додаємо 1.5 години до загальної кількості годин викладача
+                lecturer_hours[event.lecturer_id] += 1.5
         else:
             print("  EMPTY")  # Якщо у цьому часовому слоті немає подій
         print()  # Додаємо порожній рядок для відділення часових слотів
+
+    # Виводимо кількість годин викладачів на тиждень
+    print("Кількість годин лекторів на тиждень:")
+    for lecturer_id, hours in lecturer_hours.items():
+        lecturer_name = lecturers[lecturer_id]['LecturerName']
+        print(f"{lecturer_name} ({lecturer_id}): {hours} годин")
 
 
 # Клас для дублювання стандартного виводу (stdout) у консоль та файл
@@ -60,7 +87,7 @@ def main():
         sys.stdout = Tee(sys.stdout, f)  # Перенаправляємо stdout на наш клас Tee, щоб дублювати вивід
         try:
             print("\nBest schedule:\n")
-            print_schedule(best_schedule, lecturers)  # Виводимо розклад
+            print_schedule(best_schedule, lecturers, groups, auditoriums)  # Виводимо розклад
         finally:
             sys.stdout = original_stdout  # Відновлюємо оригінальний stdout
 

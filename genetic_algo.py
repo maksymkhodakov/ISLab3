@@ -69,9 +69,13 @@ class Schedule:
             # Перевірка зайнятості групи у цей часовий слот
             for group_id in event.group_ids:
                 subgroup_id = event.subgroup_ids.get(group_id) if event.subgroup_ids else 'all'
-                gt_key = (group_id, subgroup_id, event.timeslot)
+                gt_key = (group_id, event.timeslot)
+
+                # Перевірка: група не може одночасно мати лекцію і практику
                 if gt_key in group_times:
-                    hard_constraints_violations += 1  # Група або підгрупа зайнята у цей час
+                    previous_event = group_times[gt_key]
+                    if previous_event.event_type != event.event_type:
+                        hard_constraints_violations += 1  # Група не може мати лекцію та практику одночасно
                 else:
                     group_times[gt_key] = event
 
@@ -83,10 +87,10 @@ class Schedule:
                 if (event.event_type == 'Лекція' and
                         existing_event.event_type == 'Лекція' and
                         event.lecturer_id == existing_event.lecturer_id):
-                    # Дозволено
+                    # Дозволено проводити лекції декільком групам одночасно в одній аудиторії
                     pass
                 else:
-                    hard_constraints_violations += 1  # Аудиторія зайнята
+                    hard_constraints_violations += 1  # Аудиторія зайнята для іншого типу заняття
             else:
                 auditorium_times[at_key] = event
 
@@ -95,13 +99,16 @@ class Schedule:
             lecturer_hours_key = (event.lecturer_id, week)
             lecturer_hours[lecturer_hours_key] = lecturer_hours.get(lecturer_hours_key, 0) + 1.5  # Додаємо 1.5 години
             if lecturer_hours[lecturer_hours_key] > lecturers[event.lecturer_id]['MaxHoursPerWeek']:
-                hard_constraints_violations += 1  # Перевищено максимальне навантаження
+                # Порушення: Перевищено максимальне навантаження
+                exceeded_hours = lecturer_hours[lecturer_hours_key] - lecturers[event.lecturer_id]['MaxHoursPerWeek']
+                hard_constraints_violations += exceeded_hours * 10  # Множник можна налаштувати для більш суворого штрафу
 
             # М'які обмеження
 
             # Перевірка місткості аудиторії
             total_group_size = sum(
-                groups[g]['NumStudents'] // 2 if event.subgroup_ids and event.subgroup_ids.get(g) else groups[g]['NumStudents']
+                groups[g]['NumStudents'] // 2 if event.subgroup_ids and event.subgroup_ids.get(g) else groups[g][
+                    'NumStudents']
                 for g in event.group_ids)
             if auditoriums[event.auditorium_id] < total_group_size:
                 soft_constraints_score += 1  # Аудиторія замала
@@ -201,13 +208,28 @@ def generate_initial_population(pop_size, groups, subjects, lecturers, auditoriu
 def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_type, subgroup_ids=None):
     # Вибираємо випадковий часовий слот для заданого типу тижня
     timeslot = random.choice([t for t in TIMESLOTS if t.startswith(week_type)])
+
     # Знаходимо викладачів, які можуть викладати цей предмет і тип заняття
     suitable_lecturers = [lid for lid, l in lecturers.items()
                           if subj['SubjectID'] in l['SubjectsCanTeach'] and event_type in l['TypesCanTeach']]
     if not suitable_lecturers:
         return None  # Якщо немає підходящих викладачів, повертаємо None
-    lecturer_id = random.choice(suitable_lecturers)  # Вибираємо випадкового викладача
-    auditorium_id = random.choice(list(auditoriums.keys()))  # Вибираємо випадкову аудиторію
+
+    # Вибираємо випадкового викладача
+    lecturer_id = random.choice(suitable_lecturers)
+
+    # Вибираємо аудиторію, яка має достатню місткість
+    if subgroup_ids and subj['GroupID'] in subgroup_ids:
+        group_size = groups[subj['GroupID']]['NumStudents'] // 2
+    else:
+        group_size = groups[subj['GroupID']]['NumStudents']
+
+    suitable_auditoriums = [aid for aid, cap in auditoriums.items()
+                            if cap >= group_size]
+    if not suitable_auditoriums:
+        return None  # Немає аудиторій з достатньою місткістю
+    auditorium_id = random.choice(suitable_auditoriums)  # Вибираємо випадкову аудиторію з достатньою місткістю
+
     group_ids = [subj['GroupID']]  # Отримуємо ідентифікатор групи
     return Event(timeslot, group_ids, subj['SubjectID'], subj['SubjectName'],
                  lecturer_id, auditorium_id, event_type, subgroup_ids, week_type)
@@ -215,7 +237,8 @@ def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_t
 
 # Функція для відбору найкращих розкладів у популяції
 def select_population(population, groups, lecturers, auditoriums, fitness_function):
-    population.sort(key=lambda x: fitness_function(x, groups, lecturers, auditoriums))  # Сортуємо за значенням функції оцінки
+    population.sort(
+        key=lambda x: fitness_function(x, groups, lecturers, auditoriums))  # Сортуємо за значенням функції оцінки
     return population[:len(population) // 2] if len(population) > 1 else population  # Повертаємо половину найкращих
 
 
@@ -244,7 +267,6 @@ def rain(population_size, groups, subjects, lecturers, auditoriums):
     return new_population
 
 
-# Нова нетривіальна мутація з використанням обміну подій
 def mutate(schedule, lecturers, auditoriums, intensity=0.3):
     num_events_to_mutate = int(len(schedule.events) * intensity)
     # Забезпечуємо, що кількість подій для мутації є парною та не менше 2
@@ -261,27 +283,37 @@ def mutate(schedule, lecturers, auditoriums, intensity=0.3):
         event1 = events_to_mutate[i]
         event2 = events_to_mutate[i + 1]
 
-        # Зберігаємо початкові значення для перевірки обмежень
-        original_timeslot1 = event1.timeslot
-        original_timeslot2 = event2.timeslot
-        original_auditorium1 = event1.auditorium_id
-        original_auditorium2 = event2.auditorium_id
-        original_lecturer1 = event1.lecturer_id
-        original_lecturer2 = event2.lecturer_id
+        # Перевіряємо, чи можна обміняти події без порушення жорстких обмежень
+        if can_swap_events(event1, event2):
+            # Виконуємо обмін часовими слотами
+            event1.timeslot, event2.timeslot = event2.timeslot, event1.timeslot
 
-        # Виконуємо обмін часовими слотами
-        event1.timeslot = original_timeslot2
-        event2.timeslot = original_timeslot1
+            # З випадковою ймовірністю обмінюємо аудиторії, тільки якщо це дозволено
+            if random.random() < 0.5 and can_swap_auditoriums(event1, event2):
+                event1.auditorium_id, event2.auditorium_id = event2.auditorium_id, event1.auditorium_id
 
-        # З випадковою ймовірністю обмінюємо аудиторії
-        if random.random() < 0.5:
-            event1.auditorium_id = original_auditorium2
-            event2.auditorium_id = original_auditorium1
+            # З випадковою ймовірністю обмінюємо викладачів, тільки якщо це дозволено
+            if random.random() < 0.5 and can_swap_lecturers(event1, event2):
+                event1.lecturer_id, event2.lecturer_id = event2.lecturer_id, event1.lecturer_id
 
-        # З випадковою ймовірністю обмінюємо викладачів
-        if random.random() < 0.5:
-            event1.lecturer_id = original_lecturer2
-            event2.lecturer_id = original_lecturer1
+
+# Функція для перевірки можливості обміну подіями
+def can_swap_events(event1, event2):
+    # Обмін можливий, якщо не порушуються жорсткі обмеження
+    # Забороняємо обмін, якщо це призведе до того, що одна група матиме лекцію і практику одночасно
+    group_conflict = any(
+        g in event2.group_ids for g in event1.group_ids) and event1.event_type != event2.event_type
+    return not group_conflict
+
+
+# Функція для перевірки можливості обміну аудиторіями
+def can_swap_auditoriums(event1, event2):
+    return event1.auditorium_id != event2.auditorium_id
+
+
+# Функція для перевірки можливості обміну викладачами
+def can_swap_lecturers(event1, event2):
+    return event1.lecturer_id != event2.lecturer_id
 
 
 # Генетичний алгоритм для оптимізації розкладу
@@ -299,7 +331,7 @@ def genetic_algorithm(groups, subjects, lecturers, auditoriums, generations=100)
             break
         best_schedule = population[0]
         best_fitness = fitness_function(best_schedule, groups, lecturers, auditoriums)
-        print(f"Generation: {generation + 1}, Best fitness: {best_fitness}")
+        print(f"Покоління: {generation + 1}, Найкраща пристосованість: {best_fitness}")
 
         # Якщо досягли оптимального розкладу
         if best_fitness == 0:

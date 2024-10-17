@@ -89,4 +89,4 @@ def main():
     # Запускаємо генетичний алгоритм для створення розкладу
     best_schedule = genetic_algorithm(groups, subjects, lecturers, auditoriums)
     print("\nBest schedule:\n")
-    print_schedule(best_schedule, lecturers)  # Виводимо найкращий знайдений розклад
+    print_schedule(best_schedule, lecturers, groups, auditoriums)  # Виводимо найкращий знайдений розклад
