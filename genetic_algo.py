@@ -125,88 +125,52 @@ class Schedule:
         total_score = hard_constraints_violations * 1000 + soft_constraints_score  # Жорсткі обмеження важать більше
         return total_score
 
-    # Альтернативна функція оцінки (функція оцінки №2)
-    def fitness_alternative(self, groups, lecturers, auditoriums):
-        # Враховуємо баланс навантаження викладачів та кількість "вікон" у розкладі
-        total_penalty = self.fitness(groups, lecturers, auditoriums)  # Використовуємо першу функцію як основу
-
-        # Додаємо м'яке обмеження на кількість "вікон" (перерв) у розкладі
-        lecturer_windows = {}  # Словник для відстеження перерв у викладачів
-        group_windows = {}  # Словник для відстеження перерв у груп
-
-        for event in self.events:
-            day_slot = event.timeslot.split(', ')
-            day = day_slot[1]  # День
-            slot = int(day_slot[2].split(' ')[1])  # Номер заняття
-            week = day_slot[0]  # Тип тижня
-
-            # Для викладачів
-            lecturer_key = (event.lecturer_id, week)
-            if lecturer_key not in lecturer_windows:
-                lecturer_windows[lecturer_key] = {}
-            if day not in lecturer_windows[lecturer_key]:
-                lecturer_windows[lecturer_key][day] = []
-            lecturer_windows[lecturer_key][day].append(slot)
-
-            # Для груп
-            for group_id in event.group_ids:
-                subgroup_id = event.subgroup_ids.get(group_id) if event.subgroup_ids else 'all'
-                group_key = (group_id, subgroup_id, week)
-                if group_key not in group_windows:
-                    group_windows[group_key] = {}
-                if day not in group_windows[group_key]:
-                    group_windows[group_key][day] = []
-                group_windows[group_key][day].append(slot)
-
-        # Підраховуємо кількість "вікон" для викладачів
-        for lecturer, days in lecturer_windows.items():
-            for slots in days.values():
-                slots.sort()
-                windows = sum(1 for i in range(len(slots) - 1) if slots[i + 1] - slots[i] > 1)
-                total_penalty += windows
-
-        # Підраховуємо кількість "вікон" для груп
-        for group, days in group_windows.items():
-            for slots in days.values():
-                slots.sort()
-                windows = sum(1 for i in range(len(slots) - 1) if slots[i + 1] - slots[i] > 1)
-                total_penalty += windows
-
-        return total_penalty
-
 
 # Функція для генерації початкової популяції розкладів
 def generate_initial_population(pop_size, groups, subjects, lecturers, auditoriums):
     population = []
+
     for _ in range(pop_size):
+        lecturer_times = {}  # Словник для зберігання зайнятих часових слотів викладачами
+        group_times = {}  # Словник для зберігання зайнятих часових слотів групами
         schedule = Schedule()
+
         for subj in subjects:
             # Визначаємо, на які тижні проводиться предмет
             weeks = [subj['WeekType']] if subj['WeekType'] in WEEK_TYPE else WEEK_TYPE
             for week in weeks:
                 # Додаємо лекції
                 for _ in range(subj['NumLectures']):
-                    event = create_random_event(subj, groups, lecturers, auditoriums, 'Лекція', week)
-                    schedule.add_event(event)
+                    event = create_random_event(subj, groups, lecturers, auditoriums, 'Лекція', week, lecturer_times,
+                                                group_times)
+                    if event:
+                        schedule.add_event(event)
+
                 # Додаємо практичні/лабораторні заняття
                 for _ in range(subj['NumPracticals']):
                     if subj['RequiresSubgroups']:
                         # Для кожної підгрупи створюємо окрему подію
                         for subgroup_id in groups[subj['GroupID']]['Subgroups']:
-                            event = create_random_event(
-                                subj, groups, lecturers, auditoriums, 'Практика', week,
-                                {subj['GroupID']: subgroup_id})
-                            schedule.add_event(event)
+                            event = create_random_event(subj, groups, lecturers, auditoriums, 'Практика', week,
+                                                        lecturer_times, group_times,
+                                                        {subj['GroupID']: subgroup_id})
+                            if event:
+                                schedule.add_event(event)
                     else:
-                        event = create_random_event(subj, groups, lecturers, auditoriums, 'Практика', week)
-                        schedule.add_event(event)
+                        event = create_random_event(subj, groups, lecturers, auditoriums, 'Практика', week,
+                                                    lecturer_times, group_times)
+                        if event:
+                            schedule.add_event(event)
+
         population.append(schedule)  # Додаємо розклад до популяції
+
     return population
 
 
-# Функція для створення випадкової події
-def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_type, subgroup_ids=None):
+def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_type, lecturer_times, group_times,
+                        subgroup_ids=None):
     # Вибираємо випадковий часовий слот для заданого типу тижня
+    global lecturer_key
     timeslot = random.choice([t for t in TIMESLOTS if t.startswith(week_type)])
 
     # Знаходимо викладачів, які можуть викладати цей предмет і тип заняття
@@ -215,8 +179,23 @@ def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_t
     if not suitable_lecturers:
         return None  # Якщо немає підходящих викладачів, повертаємо None
 
-    # Вибираємо випадкового викладача
-    lecturer_id = random.choice(suitable_lecturers)
+    # Вибираємо випадкового викладача, перевіряючи, чи він вільний у цей часовий слот
+    random.shuffle(suitable_lecturers)
+    lecturer_id = None
+    for lid in suitable_lecturers:
+        lecturer_key = (lid, timeslot)
+        if lecturer_key not in lecturer_times:  # Перевірка на зайнятість викладача
+            lecturer_id = lid
+            break
+
+    if not lecturer_id:
+        return None  # Якщо всі викладачі зайняті у цей часовий слот, повертаємо None
+
+    # Перевірка зайнятості групи у цей часовий слот
+    for group_id in [subj['GroupID']]:
+        group_key = (group_id, timeslot)
+        if group_key in group_times:  # Якщо група вже зайнята у цей час
+            return None  # Повертаємо None, бо група не може бути на декількох заняттях одночасно
 
     # Вибираємо аудиторію, яка має достатню місткість
     if subgroup_ids and subj['GroupID'] in subgroup_ids:
@@ -231,8 +210,16 @@ def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_t
     auditorium_id = random.choice(suitable_auditoriums)  # Вибираємо випадкову аудиторію з достатньою місткістю
 
     group_ids = [subj['GroupID']]  # Отримуємо ідентифікатор групи
-    return Event(timeslot, group_ids, subj['SubjectID'], subj['SubjectName'],
-                 lecturer_id, auditorium_id, event_type, subgroup_ids, week_type)
+    event = Event(timeslot, group_ids, subj['SubjectID'], subj['SubjectName'],
+                  lecturer_id, auditorium_id, event_type, subgroup_ids, week_type)
+
+    # Заносимо викладача і групу в зайнятість на цей часовий слот
+    lecturer_times[lecturer_key] = event
+    for group_id in group_ids:
+        group_key = (group_id, timeslot)
+        group_times[group_key] = event
+
+    return event
 
 
 # Функція для відбору найкращих розкладів у популяції
