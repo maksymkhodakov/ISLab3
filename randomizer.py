@@ -8,7 +8,9 @@ def generate_random_groups(num_groups):
     for i in range(1, num_groups + 1):
         group_id = f"G{i}"  # Створюємо ідентифікатор групи (наприклад, 'G1')
         num_students = random.randint(20, 35)  # Випадкова кількість студентів у групі від 20 до 35
-        subgroups = ['1', '2']  # Підгрупи в групі
+        # Генеруємо підгрупи: мінімум 2 підгрупи для кожної групи
+        num_subgroups = 2  # Створюємо 2 підгрупи (можна змінити на рандомну кількість)
+        subgroups = [f"{j}" for j in range(1, num_subgroups + 1)]  # Наприклад, ['1', '2']
         groups[group_id] = {
             'NumStudents': num_students,  # Кількість студентів
             'Subgroups': subgroups  # Список підгруп
@@ -35,7 +37,7 @@ def generate_random_subjects(groups, num_subjects_per_group):
                 'NumLectures': num_lectures,  # Кількість лекцій
                 'NumPracticals': num_practicals,  # Кількість практичних занять
                 'RequiresSubgroups': requires_subgroups,  # Чи потрібен поділ на підгрупи
-                'WeekType': week_type  # Тип тижня: 'Парний', 'Непарний' або 'Both'
+                'WeekType': week_type  # Тип тижня: 'EVEN', 'ODD' або 'Both'
             })
             subject_counter += 1  # Збільшуємо лічильник предметів
     return subjects  # Повертаємо список предметів

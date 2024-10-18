@@ -204,35 +204,24 @@ def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_t
         if group_key in group_times:
             return None  # Повертаємо None, бо група не може бути на декількох заняттях одночасно
 
-        # Додаткова перевірка для підгруп:
-        # Якщо це лекція, перевіряємо, чи підгрупи цієї групи вже зайняті на практичних заняттях
-        if event_type == 'Лекція':
-            for subgroup_id in groups[group_id]['Subgroups']:
-                subgroup_key = (group_id, subgroup_id, timeslot)
-                if subgroup_key in group_times:
-                    return None  # Якщо підгрупа зайнята практикою, вся група не може бути на лекції
+    # Якщо це практика і потрібні підгрупи, перевіряємо, чи ініціалізовані підгрупи
+    if event_type == 'Практика':
+        if subgroup_ids is None:
+            subgroup_ids = {}  # Якщо subgroup_ids не передано, ініціалізуємо порожній словник
+        # Генеруємо підгрупи для кожної групи, якщо вони ще не були створені
+        for group_id in group_ids:
+            if group_id not in subgroup_ids:
+                subgroup_ids[group_id] = random.choice(groups[group_id]['Subgroups'])
 
-        # Якщо це практика, перевіряємо:
-        if event_type == 'Практика':
-            if group_key in group_times:
-                return None  # Якщо вся група вже має лекцію, підгрупа не може бути на практиці
+        # Тепер ви можете використовувати subgroup_ids без ризику TypeError
+        for group_id, subgroup_id in subgroup_ids.items():
+            subgroup_key = (group_id, subgroup_id, timeslot)
+            if subgroup_key in group_times:
+                return None  # Якщо підгрупа вже зайнята, повертаємо None
 
-            # Перевіряємо, чи підгрупа вже зайнята іншим викладачем у цей же час
-            for subgroup_id in groups[group_id]['Subgroups']:
-                subgroup_key = (group_id, subgroup_id, timeslot)
-                if subgroup_key in group_times:
-                    existing_event = group_times[subgroup_key]
-                    if existing_event.lecturer_id != lecturer_id or existing_event.auditorium_id != existing_event.auditorium_id:
-                        return None  # Підгрупа вже зайнята іншим викладачем або в іншій аудиторії
-
-    # Вибір найбільш місткої аудиторії для лекції
-    if event_type == 'Лекція':
-        total_group_size = sum(groups[g]['NumStudents'] for g in group_ids)
-        suitable_auditoriums = sorted([(aid, cap) for aid, cap in auditoriums.items() if cap >= total_group_size], key=lambda x: x[1], reverse=True)
-    else:
-        # Вибір аудиторії для практики або лабораторних
-        total_group_size = sum(groups[g]['NumStudents'] for g in group_ids)
-        suitable_auditoriums = [(aid, cap) for aid, cap in auditoriums.items() if cap >= total_group_size]
+    # Вибір найбільш місткої аудиторії для лекції або практики
+    total_group_size = sum(groups[g]['NumStudents'] for g in group_ids)
+    suitable_auditoriums = sorted([(aid, cap) for aid, cap in auditoriums.items() if cap >= total_group_size], key=lambda x: x[1], reverse=True)
 
     if not suitable_auditoriums:
         return None  # Немає аудиторій з достатньою місткістю
