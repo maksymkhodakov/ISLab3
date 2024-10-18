@@ -17,13 +17,17 @@ def print_schedule(schedule, lecturers, groups, auditoriums):
     # Словник для підрахунку годин викладачів
     lecturer_hours = {lecturer_id: 0 for lecturer_id in lecturers}
 
+    # Виведення заголовків колонок
+    print(f"{'Timeslot':<25} {'Group(s)':<30} {'Subject':<30} {'Type':<15} "
+          f"{'Lecturer':<25} {'Auditorium':<10} {'Students':<10} {'Capacity':<10}")
+    print("-" * 167)
+
     for timeslot in TIMESLOTS:
-        print(f"{timeslot}:")  # Виводимо часовий слот
         if timeslot in schedule_dict:
             for event in schedule_dict[timeslot]:
                 # Формуємо інформацію про групи, включаючи підгрупи, якщо вони є
                 group_info = ', '.join([
-                    f"Group: {gid}" + (
+                    f"{gid}" + (
                         f" (Subgroup {event.subgroup_ids[gid]})" if event.subgroup_ids and gid in event.subgroup_ids else ''
                     )
                     for gid in event.group_ids
@@ -37,24 +41,25 @@ def print_schedule(schedule, lecturers, groups, auditoriums):
                 # Отримуємо місткість аудиторії
                 auditorium_capacity = auditoriums[event.auditorium_id]
 
-                # Виводимо інформацію про подію: групи, предмет, тип заняття, викладача, аудиторію, кількість
-                # студентів та місткість аудиторії
-                print(f"  {group_info}, {event.subject_name} ({event.event_type}), "
-                      f"Teacher: {lecturers[event.lecturer_id]['LecturerName']}, "
-                      f"auditorium: {event.auditorium_id} "
-                      f"(Students: {total_students}, Capacity: {auditorium_capacity})")
+                # Виводимо інформацію по колонках
+                print(f"{timeslot:<25} {group_info:<30} {event.subject_name:<30} {event.event_type:<15} "
+                      f"{lecturers[event.lecturer_id]['LecturerName']:<25} {event.auditorium_id:<10} "
+                      f"{total_students:<10} {auditorium_capacity:<10}")
 
                 # Додаємо 1.5 години до загальної кількості годин викладача
                 lecturer_hours[event.lecturer_id] += 1.5
         else:
-            print("  EMPTY")  # Якщо у цьому часовому слоті немає подій
+            # Якщо у цьому часовому слоті немає подій, виводимо "EMPTY" у першій колонці
+            print(f"{timeslot:<25} {'EMPTY':<120}")
         print()  # Додаємо порожній рядок для відділення часових слотів
 
     # Виводимо кількість годин викладачів на тиждень
-    print("Кількість годин лекторів на тиждень:")
+    print("\nКількість годин лекторів на тиждень:")
+    print(f"{'Lecturer':<25} {'Total Hours':<10}")
+    print("-" * 35)
     for lecturer_id, hours in lecturer_hours.items():
         lecturer_name = lecturers[lecturer_id]['LecturerName']
-        print(f"{lecturer_name} ({lecturer_id}): {hours} годин")
+        print(f"{lecturer_name:<25} {hours:<10} годин")
 
 
 # Клас для дублювання стандартного виводу (stdout) у консоль та файл

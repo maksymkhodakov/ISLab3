@@ -1,241 +1,208 @@
 
 Best schedule:
 
-EVEN - day 1, lesson 1:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42, Статистичне моделювання (Лекція), Teacher: Зінько Т.П., auditorium: A6 (Students: 29, Capacity: 60)
-  Group: MI-41, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A6 (Students: 30, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
+Timeslot                  Group(s)                       Subject                        Type            Lecturer                  Auditorium Students   Capacity  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EVEN - day 1, lesson 1    TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+EVEN - day 1, lesson 1    TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A7         12         60        
+EVEN - day 1, lesson 1    MI-41 (Subgroup 1)             Інформаційні технології        Практика        Криволап А.В.             A8         15         60        
 
-EVEN - day 1, lesson 2:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Свистунов А.О., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 1, lesson 2    TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Зінько Т.П.               A6         15         60        
+EVEN - day 1, lesson 2    MI-41, TK-41                   Статистичне моделювання        Лекція          Пашко А.О.                A7         55         60        
+EVEN - day 1, lesson 2    TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Мащенко С.О.              A8         14         60        
 
-EVEN - day 1, lesson 3:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-41, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A6 (Students: 30, Capacity: 60)
-  Group: MI-42, Group: TK-41, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A6 (Students: 54, Capacity: 60)
+EVEN - day 1, lesson 3    TTP-41                         Теорія прийняття рішень        Лекція          Мащенко С.О.              A6         30         60        
+EVEN - day 1, lesson 3    TTP-42                         Інтелектуальні системи         Лекція          Пашко А.О.                A7         28         60        
+EVEN - day 1, lesson 3    TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+EVEN - day 1, lesson 3    MI-41 (Subgroup 2)             Інформаційні технології        Практика        Криволап А.В.             A1         15         30        
 
-EVEN - day 1, lesson 4:
-  Group: MI-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A6 (Students: 30, Capacity: 60)
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 1, lesson 4    TTP-42 (Subgroup 2)            Статистичне моделювання        Практика        Мащенко С.О.              A6         14         60        
+EVEN - day 1, lesson 4    TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Пашко А.О.                A7         12         60        
+EVEN - day 1, lesson 4    TTP-41, MI-41                  Інформаційні технології        Лекція          Тарануха В.Ю.             A8         60         60        
+EVEN - day 1, lesson 4    MI-42 (Subgroup 2)             Розробка ПЗ під мобільні       Практика        Ткаченко О.М.             A1         14         30        
 
-EVEN - day 2, lesson 1:
-  Group: MI-42, Group: TK-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 54, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 2, lesson 1    TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Мащенко С.О.              A6         14         60        
+EVEN - day 2, lesson 1    MI-41, TK-41                   Інтелектуальні системи         Лекція          Тарануха В.Ю.             A7         55         60        
+EVEN - day 2, lesson 1    MI-42 (Subgroup 2)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A8         14         60        
 
-EVEN - day 2, lesson 2:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42, Group: MI-41, Статистичне моделювання (Лекція), Teacher: Зінько Т.П., auditorium: A6 (Students: 59, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 2, lesson 2    TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+EVEN - day 2, lesson 2    TK-41, MI-41                   Статистичне моделювання        Лекція          Зінько Т.П.               A7         55         60        
+EVEN - day 2, lesson 2    TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Пашко А.О.                A8         14         60        
+EVEN - day 2, lesson 2    MI-42                          Інформаційні технології        Лекція          Свистунов А.О.            A1         29         30        
 
-EVEN - day 2, lesson 3:
-  Group: MI-42, Group: TTP-42, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 57, Capacity: 60)
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TK-41, Group: MI-41, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A6 (Students: 55, Capacity: 60)
+EVEN - day 2, lesson 3    TTP-41, TTP-42                 Теорія прийняття рішень        Лекція          Зінько Т.П.               A6         58         60        
+EVEN - day 2, lesson 3    TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A7         12         60        
+EVEN - day 2, lesson 3    MI-41 (Subgroup 2)             Інформаційні технології        Практика        Криволап А.В.             A8         15         60        
+EVEN - day 2, lesson 3    MI-42 (Subgroup 2)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A1         14         30        
 
-EVEN - day 2, lesson 4:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A6 (Students: 28, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
+EVEN - day 2, lesson 4    TTP-42, MI-41                  Теорія прийняття рішень        Лекція          Зінько Т.П.               A6         58         60        
+EVEN - day 2, lesson 4    TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Мащенко С.О.              A7         15         60        
+EVEN - day 2, lesson 4    TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Пашко А.О.                A8         12         60        
+EVEN - day 2, lesson 4    MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A1         14         30        
 
-EVEN - day 3, lesson 1:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A6 (Students: 25, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Свистунов А.О., auditorium: A6 (Students: 15, Capacity: 60)
+EVEN - day 3, lesson 1    TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Зінько Т.П.               A6         15         60        
+EVEN - day 3, lesson 1    TTP-42 (Subgroup 2)            Статистичне моделювання        Практика        Мащенко С.О.              A7         14         60        
+EVEN - day 3, lesson 1    MI-41 (Subgroup 1)             Інформаційні технології        Практика        Ткаченко О.М.             A8         15         60        
+EVEN - day 3, lesson 1    MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A1         14         30        
 
-EVEN - day 3, lesson 2:
-  Group: MI-42, Group: TTP-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A6 (Students: 59, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: TTP-42, Інформаційні технології (Лекція), Teacher: Криволап А.В., auditorium: A6 (Students: 28, Capacity: 60)
+EVEN - day 3, lesson 2    MI-42, TTP-42                  Теорія прийняття рішень        Лекція          Шишацька О.В.             A6         57         60        
+EVEN - day 3, lesson 2    TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Пашко А.О.                A7         12         60        
+EVEN - day 3, lesson 2    MI-41 (Subgroup 2)             Інформаційні технології        Практика        Ткаченко О.М.             A8         15         60        
 
-EVEN - day 3, lesson 3:
-  Group: MI-42, Group: TK-41, Теорія прийняття рішень (Лекція), Teacher: Зінько Т.П., auditorium: A6 (Students: 54, Capacity: 60)
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 15, Capacity: 60)
+EVEN - day 3, lesson 3    TTP-41                         Теорія прийняття рішень        Лекція          Зінько Т.П.               A6         30         60        
+EVEN - day 3, lesson 3    MI-42, TK-41                   Інтелектуальні системи         Лекція          Пашко А.О.                A7         54         60        
+EVEN - day 3, lesson 3    MI-41 (Subgroup 1)             Інформаційні технології        Практика        Криволап А.В.             A8         15         60        
 
-EVEN - day 3, lesson 4:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41, Інформаційні технології (Лекція), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 25, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Свистунов А.О., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 3, lesson 4    TTP-41                         Теорія прийняття рішень        Лекція          Шишацька О.В.             A6         30         60        
+EVEN - day 3, lesson 4    TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Пашко А.О.                A7         14         60        
+EVEN - day 3, lesson 4    TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+EVEN - day 3, lesson 4    MI-41 (Subgroup 1)             Інформаційні технології        Практика        Криволап А.В.             A1         15         30        
+EVEN - day 3, lesson 4    MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A2         14         30        
 
-EVEN - day 4, lesson 1:
-  Group: TTP-42, Group: MI-42, Теорія прийняття рішень (Лекція), Teacher: Зінько Т.П., auditorium: A6 (Students: 57, Capacity: 60)
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41, Інформаційні технології (Лекція), Teacher: Свистунов А.О., auditorium: A6 (Students: 30, Capacity: 60)
+EVEN - day 4, lesson 1    TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+EVEN - day 4, lesson 1    TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Пашко А.О.                A7         12         60        
+EVEN - day 4, lesson 1    MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A8         14         60        
 
-EVEN - day 4, lesson 2:
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: MI-42, Group: MI-41, Інтелектуальні системи (Лекція), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 59, Capacity: 60)
+EVEN - day 4, lesson 2    TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+EVEN - day 4, lesson 2    TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Зінько Т.П.               A7         14         60        
+EVEN - day 4, lesson 2    TK-41                          Інтелектуальні системи         Лекція          Тарануха В.Ю.             A8         25         60        
+EVEN - day 4, lesson 2    MI-41 (Subgroup 1)             Інформаційні технології        Практика        Ткаченко О.М.             A1         15         30        
+EVEN - day 4, lesson 2    MI-42 (Subgroup 2)             Розробка ПЗ під мобільні       Практика        Криволап А.В.             A2         14         30        
 
-EVEN - day 4, lesson 3:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42, Статистичне моделювання (Лекція), Teacher: Зінько Т.П., auditorium: A6 (Students: 28, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A6 (Students: 30, Capacity: 60)
-  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 4, lesson 3    TTP-41, MI-42                  Теорія прийняття рішень        Лекція          Мащенко С.О.              A6         59         60        
+EVEN - day 4, lesson 3    TTP-42                         Інтелектуальні системи         Лекція          Пашко А.О.                A7         28         60        
+EVEN - day 4, lesson 3    TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+EVEN - day 4, lesson 3    MI-41 (Subgroup 2)             Інформаційні технології        Практика        Свистунов А.О.            A1         15         30        
 
-EVEN - day 4, lesson 4:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 4, lesson 4    TTP-41                         Теорія прийняття рішень        Лекція          Мащенко С.О.              A6         30         60        
+EVEN - day 4, lesson 4    TTP-42 (Subgroup 2)            Статистичне моделювання        Практика        Пашко А.О.                A7         14         60        
+EVEN - day 4, lesson 4    TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+EVEN - day 4, lesson 4    MI-41 (Subgroup 1)             Інформаційні технології        Практика        Свистунов А.О.            A1         15         30        
 
-EVEN - day 5, lesson 1:
-  Group: MI-41, Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 60, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 5, lesson 1    TTP-41, MI-42                  Теорія прийняття рішень        Лекція          Зінько Т.П.               A6         59         60        
+EVEN - day 5, lesson 1    MI-41 (Subgroup 2)             Інформаційні технології        Практика        Ткаченко О.М.             A7         15         60        
 
-EVEN - day 5, lesson 2:
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 5, lesson 2    TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Мащенко С.О.              A6         15         60        
+EVEN - day 5, lesson 2    MI-41, MI-42                   Статистичне моделювання        Лекція          Пашко А.О.                A7         59         60        
+EVEN - day 5, lesson 2    TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Зінько Т.П.               A8         14         60        
+EVEN - day 5, lesson 2    TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A1         12         30        
 
-EVEN - day 5, lesson 3:
-  Group: MI-41, Group: TTP-42, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 58, Capacity: 60)
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 5, lesson 3    TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Мащенко С.О.              A6         15         60        
+EVEN - day 5, lesson 3    TTP-42, MI-41                  Статистичне моделювання        Лекція          Пашко А.О.                A7         58         60        
+EVEN - day 5, lesson 3    MI-42                          Інформаційні технології        Лекція          Тарануха В.Ю.             A8         29         60        
 
-EVEN - day 5, lesson 4:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 14, Capacity: 60)
+EVEN - day 5, lesson 4    TTP-42 (Subgroup 2)            Статистичне моделювання        Практика        Зінько Т.П.               A6         14         60        
+EVEN - day 5, lesson 4    TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A7         12         60        
+EVEN - day 5, lesson 4    MI-41 (Subgroup 2)             Інформаційні технології        Практика        Свистунов А.О.            A8         15         60        
+EVEN - day 5, lesson 4    MI-42                          Розробка ПЗ під мобільні       Лекція          Ткаченко О.М.             A1         29         30        
 
-ODD - day 1, lesson 1:
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 1, lesson 1     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Зінько Т.П.               A6         15         60        
+ODD - day 1, lesson 1     TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Мащенко С.О.              A7         14         60        
+ODD - day 1, lesson 1     TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+ODD - day 1, lesson 1     MI-42 (Subgroup 2)             Розробка ПЗ під мобільні       Практика        Криволап А.В.             A1         14         30        
 
-ODD - day 1, lesson 2:
-  Group: MI-41, Теорія прийняття рішень (Лекція), Teacher: Зінько Т.П., auditorium: A6 (Students: 30, Capacity: 60)
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42, Group: MI-42, Інформаційні технології (Лекція), Teacher: Ткаченко О.М., auditorium: A6 (Students: 57, Capacity: 60)
+ODD - day 1, lesson 2     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Зінько Т.П.               A6         15         60        
+ODD - day 1, lesson 2     MI-42                          Статистичне моделювання        Лекція          Пашко А.О.                A7         29         60        
+ODD - day 1, lesson 2     TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Мащенко С.О.              A8         14         60        
+ODD - day 1, lesson 2     TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A1         12         30        
+ODD - day 1, lesson 2     MI-41 (Subgroup 2)             Інформаційні технології        Практика        Ткаченко О.М.             A2         15         30        
 
-ODD - day 1, lesson 3:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42, Group: TK-41, Статистичне моделювання (Лекція), Teacher: Пашко А.О., auditorium: A6 (Students: 53, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 15, Capacity: 60)
+ODD - day 1, lesson 3     TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+ODD - day 1, lesson 3     TTP-42, MI-42                  Статистичне моделювання        Лекція          Пашко А.О.                A7         57         60        
+ODD - day 1, lesson 3     TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
 
-ODD - day 1, lesson 4:
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 1, lesson 4     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Мащенко С.О.              A6         15         60        
+ODD - day 1, lesson 4     TTP-42                         Статистичне моделювання        Лекція          Зінько Т.П.               A7         28         60        
+ODD - day 1, lesson 4     TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Пашко А.О.                A8         12         60        
+ODD - day 1, lesson 4     MI-41 (Subgroup 2)             Інформаційні технології        Практика        Свистунов А.О.            A1         15         30        
+ODD - day 1, lesson 4     MI-42 (Subgroup 2)             Розробка ПЗ під мобільні       Практика        Ткаченко О.М.             A2         14         30        
 
-ODD - day 2, lesson 1:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-41, Group: MI-42, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A6 (Students: 59, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 2, lesson 1     TTP-41                         Теорія прийняття рішень        Лекція          Мащенко С.О.              A6         30         60        
+ODD - day 2, lesson 1     TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Пашко А.О.                A7         14         60        
+ODD - day 2, lesson 1     TK-41                          Інтелектуальні системи         Лекція          Тарануха В.Ю.             A8         25         60        
+ODD - day 2, lesson 1     MI-41 (Subgroup 2)             Інформаційні технології        Практика        Ткаченко О.М.             A1         15         30        
+ODD - day 2, lesson 1     MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Шишацька О.В.             A2         14         30        
 
-ODD - day 2, lesson 2:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42, Статистичне моделювання (Лекція), Teacher: Зінько Т.П., auditorium: A6 (Students: 29, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
+ODD - day 2, lesson 2     TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Мащенко С.О.              A6         15         60        
+ODD - day 2, lesson 2     MI-42                          Статистичне моделювання        Лекція          Зінько Т.П.               A7         29         60        
+ODD - day 2, lesson 2     TTP-42 (Subgroup 2)            Статистичне моделювання        Практика        Пашко А.О.                A8         14         60        
+ODD - day 2, lesson 2     TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A1         12         30        
+ODD - day 2, lesson 2     MI-41 (Subgroup 1)             Інформаційні технології        Практика        Ткаченко О.М.             A2         15         30        
 
-ODD - day 2, lesson 3:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 15, Capacity: 60)
+ODD - day 2, lesson 3     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+ODD - day 2, lesson 3     TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Зінько Т.П.               A7         14         60        
+ODD - day 2, lesson 3     TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Пашко А.О.                A8         12         60        
+ODD - day 2, lesson 3     MI-41 (Subgroup 1)             Інформаційні технології        Практика        Свистунов А.О.            A1         15         30        
 
-ODD - day 2, lesson 4:
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 2, lesson 4     TTP-42, TK-41                  Теорія прийняття рішень        Лекція          Мащенко С.О.              A6         53         60        
+ODD - day 2, lesson 4     MI-41 (Subgroup 1)             Інформаційні технології        Практика        Ткаченко О.М.             A7         15         60        
+ODD - day 2, lesson 4     MI-42                          Розробка ПЗ під мобільні       Лекція          Криволап А.В.             A8         29         60        
 
-ODD - day 3, lesson 1:
-  Group: TTP-41, Group: MI-42, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 59, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 15, Capacity: 60)
+ODD - day 3, lesson 1     MI-42, TTP-42                  Теорія прийняття рішень        Лекція          Шишацька О.В.             A6         57         60        
+ODD - day 3, lesson 1     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Мащенко С.О.              A7         15         60        
+ODD - day 3, lesson 1     TK-41                          Інтелектуальні системи         Лекція          Пашко А.О.                A8         25         60        
+ODD - day 3, lesson 1     MI-41 (Subgroup 2)             Інформаційні технології        Практика        Тарануха В.Ю.             A1         15         30        
 
-ODD - day 3, lesson 2:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 3, lesson 2     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+ODD - day 3, lesson 2     TTP-42                         Статистичне моделювання        Лекція          Зінько Т.П.               A7         28         60        
+ODD - day 3, lesson 2     TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+ODD - day 3, lesson 2     MI-41 (Subgroup 1)             Інформаційні технології        Практика        Криволап А.В.             A1         15         30        
+ODD - day 3, lesson 2     MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Ткаченко О.М.             A2         14         30        
 
-ODD - day 3, lesson 3:
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: MI-42, Group: MI-41, Інтелектуальні системи (Лекція), Teacher: Пашко А.О., auditorium: A6 (Students: 59, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
+ODD - day 3, lesson 3     TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+ODD - day 3, lesson 3     TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Пашко А.О.                A7         12         60        
+ODD - day 3, lesson 3     MI-41 (Subgroup 2)             Інформаційні технології        Практика        Криволап А.В.             A8         15         60        
+ODD - day 3, lesson 3     MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A1         14         30        
 
-ODD - day 3, lesson 4:
-  Group: MI-41, Group: TTP-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A6 (Students: 60, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 3, lesson 4     MI-41, TTP-42                  Теорія прийняття рішень        Лекція          Зінько Т.П.               A6         58         60        
+ODD - day 3, lesson 4     TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Шишацька О.В.             A7         15         60        
+ODD - day 3, lesson 4     TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+ODD - day 3, lesson 4     MI-42                          Розробка ПЗ під мобільні       Лекція          Свистунов А.О.            A1         29         30        
 
-ODD - day 4, lesson 1:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 15, Capacity: 60)
+ODD - day 4, lesson 1     TTP-42 (Subgroup 2)            Статистичне моделювання        Практика        Пашко А.О.                A6         14         60        
+ODD - day 4, lesson 1     MI-42, TK-41                   Інформаційні технології        Лекція          Свистунов А.О.            A7         54         60        
 
-ODD - day 4, lesson 2:
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Свистунов А.О., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 4, lesson 2     MI-41                          Статистичне моделювання        Лекція          Зінько Т.П.               A6         30         60        
+ODD - day 4, lesson 2     TTP-42 (Subgroup 1)            Статистичне моделювання        Практика        Мащенко С.О.              A7         14         60        
+ODD - day 4, lesson 2     TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
 
-ODD - day 4, lesson 3:
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 2), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 2), Інформаційні технології (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Свистунов А.О., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 4, lesson 3     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Шишацька О.В.             A6         15         60        
+ODD - day 4, lesson 3     TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A7         12         60        
+ODD - day 4, lesson 3     MI-42                          Інформаційні технології        Лекція          Свистунов А.О.            A8         29         60        
+ODD - day 4, lesson 3     MI-41 (Subgroup 2)             Інформаційні технології        Практика        Криволап А.В.             A1         15         30        
 
-ODD - day 4, lesson 4:
-  Group: TK-41, Теорія прийняття рішень (Лекція), Teacher: Мащенко С.О., auditorium: A6 (Students: 25, Capacity: 60)
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Шишацька О.В., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Криволап А.В., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 4, lesson 4     TTP-42, TTP-41                 Теорія прийняття рішень        Лекція          Шишацька О.В.             A6         58         60        
+ODD - day 4, lesson 4     TK-41                          Теорія прийняття рішень        Лекція          Мащенко С.О.              A7         25         60        
+ODD - day 4, lesson 4     MI-41                          Інтелектуальні системи         Лекція          Тарануха В.Ю.             A8         30         60        
+ODD - day 4, lesson 4     MI-42 (Subgroup 2)             Розробка ПЗ під мобільні       Практика        Криволап А.В.             A1         14         30        
 
-ODD - day 5, lesson 1:
-  Group: MI-42, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 29, Capacity: 60)
-  Group: TTP-41 (Subgroup 2), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Тарануха В.Ю., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-41 (Subgroup 1), Інформаційні технології (Практика), Teacher: Свистунов А.О., auditorium: A6 (Students: 15, Capacity: 60)
+ODD - day 5, lesson 1     TK-41, TTP-42                  Інтелектуальні системи         Лекція          Пашко А.О.                A6         53         60        
 
-ODD - day 5, lesson 2:
-  Group: TK-41, Group: MI-42, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 54, Capacity: 60)
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 2), Статистичне моделювання (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 5, lesson 2     TTP-42                         Теорія прийняття рішень        Лекція          Шишацька О.В.             A6         28         60        
+ODD - day 5, lesson 2     TTP-41 (Subgroup 2)            Теорія прийняття рішень        Практика        Мащенко С.О.              A7         15         60        
+ODD - day 5, lesson 2     TK-41 (Subgroup 1)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+ODD - day 5, lesson 2     MI-41 (Subgroup 2)             Інформаційні технології        Практика        Криволап А.В.             A1         15         30        
+ODD - day 5, lesson 2     MI-42 (Subgroup 1)             Розробка ПЗ під мобільні       Практика        Свистунов А.О.            A2         14         30        
 
-ODD - day 5, lesson 3:
-  Group: MI-41, Теорія прийняття рішень (Лекція), Teacher: Шишацька О.В., auditorium: A6 (Students: 30, Capacity: 60)
-  Group: TTP-41 (Subgroup 1), Теорія прийняття рішень (Практика), Teacher: Зінько Т.П., auditorium: A6 (Students: 15, Capacity: 60)
-  Group: TTP-42 (Subgroup 1), Статистичне моделювання (Практика), Teacher: Мащенко С.О., auditorium: A6 (Students: 14, Capacity: 60)
-  Group: MI-42 (Subgroup 2), Розробка ПЗ під мобільні платформи (Практика), Teacher: Свистунов А.О., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 5, lesson 3     TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Мащенко С.О.              A6         15         60        
+ODD - day 5, lesson 3     TTP-42 (Subgroup 2)            Статистичне моделювання        Практика        Зінько Т.П.               A7         14         60        
+ODD - day 5, lesson 3     TK-41, MI-42                   Інтелектуальні системи         Лекція          Пашко А.О.                A8         54         60        
+ODD - day 5, lesson 3     MI-41                          Інтелектуальні системи         Лекція          Тарануха В.Ю.             A1         30         30        
 
-ODD - day 5, lesson 4:
-  Group: MI-41, Статистичне моделювання (Лекція), Teacher: Мащенко С.О., auditorium: A6 (Students: 30, Capacity: 60)
-  Group: TK-41 (Subgroup 1), Інтелектуальні системи (Практика), Teacher: Пашко А.О., auditorium: A6 (Students: 12, Capacity: 60)
-  Group: MI-42 (Subgroup 1), Розробка ПЗ під мобільні платформи (Практика), Teacher: Ткаченко О.М., auditorium: A6 (Students: 14, Capacity: 60)
+ODD - day 5, lesson 4     TTP-41 (Subgroup 1)            Теорія прийняття рішень        Практика        Мащенко С.О.              A6         15         60        
+ODD - day 5, lesson 4     MI-42, TTP-42                  Статистичне моделювання        Лекція          Зінько Т.П.               A7         57         60        
+ODD - day 5, lesson 4     TK-41 (Subgroup 2)             Інтелектуальні системи         Практика        Тарануха В.Ю.             A8         12         60        
+ODD - day 5, lesson 4     MI-41 (Subgroup 1)             Інформаційні технології        Практика        Ткаченко О.М.             A1         15         30        
+
 
 Кількість годин лекторів на тиждень:
-Мащенко С.О. (L1): 37.5 годин
-Пашко А.О. (L2): 34.5 годин
-Тарануха В.Ю. (L3): 34.5 годин
-Ткаченко О.М. (L4): 24.0 годин
-Шишацька О.В. (L5): 28.5 годин
-Криволап А.В. (L6): 18.0 годин
-Свистунов А.О. (L7): 12.0 годин
-Зінько Т.П. (L8): 34.5 годин
+Lecturer                  Total Hours
+-----------------------------------
+Мащенко С.О.              33.0       годин
+Пашко А.О.                36.0       годин
+Тарануха В.Ю.             39.0       годин
+Ткаченко О.М.             19.5       годин
+Шишацька О.В.             24.0       годин
+Криволап А.В.             19.5       годин
+Свистунов А.О.            25.5       годин
+Зінько Т.П.               30.0       годин
