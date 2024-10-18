@@ -63,7 +63,6 @@ class Schedule:
             lt_key = (event.lecturer_id, event.timeslot)
             if lt_key in lecturer_times:
                 hard_constraints_violations += 1  # Викладач зайнятий у цей час
-                print(f"Жорстке обмеження: викладач {event.lecturer_id} зайнятий у {event.timeslot}")
             else:
                 lecturer_times[lt_key] = event
 
@@ -77,8 +76,6 @@ class Schedule:
                     previous_event = group_times[gt_key]
                     if previous_event.event_type != event.event_type:
                         hard_constraints_violations += 1  # Група не може мати лекцію та практику одночасно
-                        print(
-                            f"Жорстке обмеження: група {group_id} вже має {previous_event.event_type} у {event.timeslot}")
                 else:
                     group_times[gt_key] = event
 
@@ -94,7 +91,6 @@ class Schedule:
                     pass
                 else:
                     hard_constraints_violations += 1  # Аудиторія зайнята
-                    print(f"Жорстке обмеження: аудиторія {event.auditorium_id} зайнята у {event.timeslot}")
             else:
                 auditorium_times[at_key] = event
 
@@ -106,7 +102,6 @@ class Schedule:
                 # Порушення: Перевищено максимальне навантаження
                 exceeded_hours = lecturer_hours[lecturer_hours_key] - lecturers[event.lecturer_id]['MaxHoursPerWeek']
                 hard_constraints_violations += exceeded_hours * 10  # Штраф за перевищення годин
-                print(f"Жорстке обмеження: перевищено навантаження для {event.lecturer_id}")
 
             # М'які обмеження
 
@@ -116,18 +111,15 @@ class Schedule:
                     'NumStudents']
                 for g in event.group_ids)
             if auditoriums[event.auditorium_id] < total_group_size:
-                soft_constraints_score += 10  # Аудиторія замала
-                print(f"М'яке обмеження: аудиторія {event.auditorium_id} замала для {total_group_size} студентів")
+                soft_constraints_score += 1  # Аудиторія замала
 
             # Перевірка, чи викладач може викладати цей предмет
             if event.subject_id not in lecturers[event.lecturer_id]['SubjectsCanTeach']:
-                soft_constraints_score += 10  # Викладач не може викладати цей предмет
-                print(f"М'яке обмеження: викладач {event.lecturer_id} не може викладати предмет {event.subject_id}")
+                soft_constraints_score += 1  # Викладач не може викладати цей предмет
 
             # Перевірка, чи викладач може проводити цей тип заняття
             if event.event_type not in lecturers[event.lecturer_id]['TypesCanTeach']:
-                soft_constraints_score += 10  # Викладач не може проводити цей тип заняття
-                print(f"М'яке обмеження: викладач {event.lecturer_id} не може проводити заняття {event.event_type}")
+                soft_constraints_score += 1  # Викладач не може проводити цей тип заняття
 
         # Функціонал якості №1: Мінімізуємо кількість порушень
         total_score = hard_constraints_violations * 1000 + soft_constraints_score  # Жорсткі обмеження важать більше
@@ -191,7 +183,7 @@ def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_t
     lecturer_id = None
     for lid in suitable_lecturers:
         lecturer_key = (lid, timeslot)
-        if lecturer_key not in lecturer_times:  # Перевірка на зайнятість викладача
+        if lecturer_key not in lecturer_times:  # Жорстке обмеження: викладач не зайнятий
             lecturer_id = lid
             break
 
@@ -208,9 +200,11 @@ def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_t
     for group_id in group_ids:
         group_key = (group_id, timeslot)
 
-        # Перевіряємо, чи група зайнята на іншому занятті в цей час
+        # Жорстке обмеження: група не може бути на паралельних заняттях, окрім лекцій
         if group_key in group_times:
-            return None  # Повертаємо None, бо група не може бути на декількох заняттях одночасно
+            existing_event = group_times[group_key]
+            if existing_event.event_type != 'Лекція' or event_type != 'Лекція':
+                return None  # Повертаємо None, якщо це не дві лекції для різних груп
 
     # Якщо це практика і потрібні підгрупи, перевіряємо, чи ініціалізовані підгрупи
     if event_type == 'Практика':
@@ -224,19 +218,23 @@ def create_random_event(subj, groups, lecturers, auditoriums, event_type, week_t
         # Тепер ви можете використовувати subgroup_ids без ризику TypeError
         for group_id, subgroup_id in subgroup_ids.items():
             subgroup_key = (group_id, subgroup_id, timeslot)
-            if subgroup_key in group_times:
-                return None  # Якщо підгрупа вже зайнята, повертаємо None
+            if subgroup_key in group_times:  # Підгрупа не може бути зайнята
+                return None
 
     # Вибір найбільш місткої аудиторії для лекції або практики, перевіряючи, чи вона не зайнята
     total_group_size = sum(groups[g]['NumStudents'] for g in group_ids)
     suitable_auditoriums = sorted([(aid, cap) for aid, cap in auditoriums.items() if cap >= total_group_size], key=lambda x: x[1], reverse=True)
 
+    if not suitable_auditoriums:
+        return None  # Немає доступних аудиторій
+
+    # Вибираємо першу доступну аудиторію, яка не зайнята
     for auditorium_id, capacity in suitable_auditoriums:
         auditorium_key = (auditorium_id, timeslot)
-        if auditorium_key not in group_times:  # Перевіряємо, чи аудиторія не зайнята в цей слот
+        if auditorium_key not in group_times:  # Жорстке обмеження: аудиторія не зайнята
             break
     else:
-        return None  # Якщо всі підходящі аудиторії зайняті, повертаємо None
+        return None  # Якщо всі аудиторії зайняті, повертаємо None
 
     event = Event(timeslot, group_ids, subj['SubjectID'], subj['SubjectName'],
                   lecturer_id, auditorium_id, event_type, subgroup_ids, week_type)
