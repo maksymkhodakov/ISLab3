@@ -86,7 +86,7 @@ def main():
     # Запускаємо генетичний алгоритм для отримання найкращого розкладу
     best_schedule = genetic_algorithm(groups, subjects, lecturers, auditoriums)
 
-    # Виводимо розклад у консоль та записуємо його у файл
+    # Виводимо розклад у консоль та записуємо його у файл по заданій назві
     with open('schedule_output.txt', 'w', encoding='utf-8') as f:
         original_stdout = sys.stdout  # Зберігаємо оригінальний stdout
         sys.stdout = Tee(sys.stdout, f)  # Перенаправляємо stdout на наш клас Tee, щоб дублювати вивід
