@@ -51,11 +51,11 @@ class Schedule:
         hard_constraints_violations = 0  # Кількість порушень жорстких обмежень
         soft_constraints_score = 0  # Сума порушень м'яких обмежень
 
-        lecturer_times = {}  # Словник зайнятих часових слотів викладачами
-        group_times = {}  # Словник зайнятих часових слотів групами
-        subgroup_times = {}  # Словник зайнятих часових слотів підгрупами
-        auditorium_times = {}  # Словник зайнятих аудиторій
-        lecturer_hours = {}  # Словник кількості годин викладачів на тиждень
+        lecturer_times = {}
+        group_times = {}
+        subgroup_times = {}
+        auditorium_times = {}
+        lecturer_hours = {}
 
         for event in self.events:
             # Жорсткі обмеження
@@ -63,7 +63,8 @@ class Schedule:
             # Перевірка зайнятості викладача у цей часовий слот
             lt_key = (event.lecturer_id, event.timeslot)
             if lt_key in lecturer_times:
-                hard_constraints_violations += 1  # Викладач зайнятий у цей час
+                if lecturer_times[lt_key] != event:
+                    hard_constraints_violations += 1  # Викладач зайнятий на іншому занятті
             else:
                 lecturer_times[lt_key] = event
 
@@ -71,7 +72,8 @@ class Schedule:
             for group_id in event.group_ids:
                 gt_key = (group_id, event.timeslot)
                 if gt_key in group_times:
-                    hard_constraints_violations += 1  # Група вже зайнята у цей час
+                    if group_times[gt_key] != event:
+                        hard_constraints_violations += 1  # Група зайнята на іншому занятті
                 else:
                     group_times[gt_key] = event
 
@@ -80,23 +82,31 @@ class Schedule:
                     subgroup_id = event.subgroup_ids[group_id]
                     sgt_key = (group_id, subgroup_id, event.timeslot)
                     if sgt_key in subgroup_times:
-                        hard_constraints_violations += 1  # Підгрупа зайнята у цей час
+                        if subgroup_times[sgt_key] != event:
+                            hard_constraints_violations += 1  # Підгрупа зайнята на іншому занятті
                     else:
                         subgroup_times[sgt_key] = event
 
             # Перевірка зайнятості аудиторії у цей часовий слот
             at_key = (event.auditorium_id, event.timeslot)
             if at_key in auditorium_times:
-                hard_constraints_violations += 1  # Аудиторія зайнята
+                existing_event = auditorium_times[at_key]
+                if (event.event_type == 'Лекція' and
+                        existing_event.event_type == 'Лекція' and
+                        event.lecturer_id == existing_event.lecturer_id):
+                    # Об'єднуємо лекції з тим самим викладачем
+                    pass
+                else:
+                    hard_constraints_violations += 1  # Аудиторія зайнята
             else:
                 auditorium_times[at_key] = event
 
             # Перевірка максимального навантаження викладача на тиждень
             week = event.timeslot.split(' - ')[0]
             lecturer_hours_key = (event.lecturer_id, week)
-            lecturer_hours[lecturer_hours_key] = lecturer_hours.get(lecturer_hours_key, 0) + 1.5  # Додаємо 1.5 години
+            lecturer_hours[lecturer_hours_key] = lecturer_hours.get(lecturer_hours_key, 0) + 1.5
             if lecturer_hours[lecturer_hours_key] > lecturers[event.lecturer_id]['MaxHoursPerWeek']:
-                hard_constraints_violations += 1  # Перевищено максимальне навантаження
+                hard_constraints_violations += 1  # Перевищено навантаження
 
             # М'які обмеження
 
@@ -127,7 +137,7 @@ def generate_initial_population(pop_size, groups, subjects, lecturers, auditoriu
     population = []
     for _ in range(pop_size):
         lecturer_times = {}  # Словник для зберігання зайнятих часових слотів викладачами
-        group_times = {}     # Словник для зберігання зайнятих часових слотів групами
+        group_times = {}  # Словник для зберігання зайнятих часових слотів групами
         subgroup_times = {}  # Словник для зберігання зайнятості підгруп
         auditorium_times = {}  # Словник для зберігання зайнятих аудиторій
         schedule = Schedule()
@@ -169,10 +179,9 @@ def generate_initial_population(pop_size, groups, subjects, lecturers, auditoriu
     return population
 
 
-
 def create_random_event(
-    subj, groups, lecturers, auditoriums, event_type, week_type,
-    lecturer_times, group_times, subgroup_times, auditorium_times, subgroup_ids=None
+        subj, groups, lecturers, auditoriums, event_type, week_type,
+        lecturer_times, group_times, subgroup_times, auditorium_times, subgroup_ids=None
 ):
     # Вибираємо випадковий часовий слот для заданого типу тижня
     global lecturer_key
@@ -184,7 +193,7 @@ def create_random_event(
         if subj['SubjectID'] in l['SubjectsCanTeach'] and event_type in l['TypesCanTeach']
     ]
     if not suitable_lecturers:
-        return None  # Якщо немає підходящих викладачів, повертаємо None
+        return None  # Немає підходящих викладачів
 
     # Вибираємо випадкового викладача, який не зайнятий у цей часовий слот
     random.shuffle(suitable_lecturers)
@@ -198,7 +207,18 @@ def create_random_event(
         return None  # Всі викладачі зайняті
 
     # Вибір груп
-    group_ids = [subj['GroupID']]
+    if event_type == 'Лекція':
+        # Вибираємо від 1 до 3 груп, які не зайняті в цей часовий слот
+        available_groups = [gid for gid in groups if (gid, timeslot) not in group_times]
+        if not available_groups:
+            return None  # Немає доступних груп
+        num_groups = random.randint(1, min(3, len(available_groups)))
+        group_ids = random.sample(available_groups, num_groups)
+    else:
+        group_ids = [subj['GroupID']]
+        # Перевірка зайнятості групи
+        if (group_ids[0], timeslot) in group_times:
+            return None  # Група зайнята
 
     # Перевірка зайнятості груп
     for group_id in group_ids:
@@ -246,7 +266,7 @@ def create_random_event(
         lecturer_id, auditorium_id, event_type, subgroup_ids, week_type
     )
 
-    # Реєструємо зайнятість викладача, групи, підгруп та аудиторії
+    # Реєструємо зайнятість викладача, груп, підгруп та аудиторії
     lecturer_times[lecturer_key] = event
     for group_id in group_ids:
         group_key = (group_id, timeslot)
@@ -254,7 +274,7 @@ def create_random_event(
         if event_type == 'Практика' and subgroup_ids and group_id in subgroup_ids:
             subgroup_id = subgroup_ids[group_id]
             subgroup_key = (group_id, subgroup_id, timeslot)
-            subgroup_times[subgroup_key] = event  # Реєструємо зайнятість підгрупи
+            subgroup_times[subgroup_key] = event
     auditorium_times[(auditorium_id, timeslot)] = event
 
     return event
