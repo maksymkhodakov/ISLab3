@@ -37,19 +37,20 @@ class Event:
         self.week_type = week_type  # Тип тижня ('EVEN', 'ODD' або 'Both')
 
 
-# Клас для представлення розкладу
 class Schedule:
     def __init__(self):
         self.events = []  # Список подій у розкладі
+        self.hard_constraints_violations = 0  # Ініціалізація для жорстких обмежень
+        self.soft_constraints_score = 0       # Ініціалізація для м'яких обмежень
 
     def add_event(self, event):
         if event:
             self.events.append(event)  # Додаємо подію до розкладу
 
-    # Функція оцінки розкладу (функція оцінки №1)
+    # Функція оцінки розкладу
     def fitness(self, groups, lecturers, auditoriums):
-        hard_constraints_violations = 0  # Кількість порушень жорстких обмежень
-        soft_constraints_score = 0  # Сума порушень м'яких обмежень
+        self.hard_constraints_violations = 0  # Скидаємо лічильник порушень
+        self.soft_constraints_score = 0       # Скидаємо лічильник м'яких обмежень
 
         lecturer_times = {}
         group_times = {}
@@ -59,77 +60,61 @@ class Schedule:
 
         for event in self.events:
             # Жорсткі обмеження
-
-            # Перевірка зайнятості викладача у цей часовий слот
             lt_key = (event.lecturer_id, event.timeslot)
             if lt_key in lecturer_times:
-                if lecturer_times[lt_key] != event:
-                    hard_constraints_violations += 1  # Викладач зайнятий на іншому занятті
+                self.hard_constraints_violations += 1  # Викладач зайнятий на іншому занятті
             else:
                 lecturer_times[lt_key] = event
 
-            # Перевірка зайнятості групи у цей часовий слот
             for group_id in event.group_ids:
                 gt_key = (group_id, event.timeslot)
                 if gt_key in group_times:
-                    if group_times[gt_key] != event:
-                        hard_constraints_violations += 1  # Група зайнята на іншому занятті
+                    self.hard_constraints_violations += 1  # Група зайнята на іншому занятті
                 else:
                     group_times[gt_key] = event
 
-                # Перевірка зайнятості підгрупи
                 if event.subgroup_ids and group_id in event.subgroup_ids:
                     subgroup_id = event.subgroup_ids[group_id]
                     sgt_key = (group_id, subgroup_id, event.timeslot)
                     if sgt_key in subgroup_times:
-                        if subgroup_times[sgt_key] != event:
-                            hard_constraints_violations += 1  # Підгрупа зайнята на іншому занятті
+                        self.hard_constraints_violations += 1  # Підгрупа зайнята на іншому занятті
                     else:
                         subgroup_times[sgt_key] = event
 
-            # Перевірка зайнятості аудиторії у цей часовий слот
             at_key = (event.auditorium_id, event.timeslot)
             if at_key in auditorium_times:
                 existing_event = auditorium_times[at_key]
                 if (event.event_type == 'Лекція' and
                         existing_event.event_type == 'Лекція' and
                         event.lecturer_id == existing_event.lecturer_id):
-                    # Об'єднуємо лекції з тим самим викладачем
                     pass
                 else:
-                    hard_constraints_violations += 1  # Аудиторія зайнята
+                    self.hard_constraints_violations += 1  # Аудиторія зайнята
             else:
                 auditorium_times[at_key] = event
 
-            # Перевірка максимального навантаження викладача на тиждень
             week = event.timeslot.split(' - ')[0]
             lecturer_hours_key = (event.lecturer_id, week)
             lecturer_hours[lecturer_hours_key] = lecturer_hours.get(lecturer_hours_key, 0) + 1.5
             if lecturer_hours[lecturer_hours_key] > lecturers[event.lecturer_id]['MaxHoursPerWeek']:
-                hard_constraints_violations += 1  # Перевищено навантаження
+                self.hard_constraints_violations += 1  # Перевищено навантаження
 
             # М'які обмеження
-
-            # Перевірка місткості аудиторії
             total_group_size = sum(
                 groups[g]['NumStudents'] // 2 if event.subgroup_ids and event.subgroup_ids.get(g) else groups[g][
                     'NumStudents']
                 for g in event.group_ids)
             if auditoriums[event.auditorium_id] < total_group_size:
-                soft_constraints_score += 1  # Аудиторія замала
+                self.soft_constraints_score += 1  # Аудиторія замала
 
-            # Перевірка, чи викладач може викладати цей предмет
             if event.subject_id not in lecturers[event.lecturer_id]['SubjectsCanTeach']:
-                soft_constraints_score += 1  # Викладач не може викладати цей предмет
+                self.soft_constraints_score += 1  # Викладач не може викладати цей предмет
 
-            # Перевірка, чи викладач може проводити цей тип заняття
             if event.event_type not in lecturers[event.lecturer_id]['TypesCanTeach']:
-                soft_constraints_score += 1  # Викладач не може проводити цей тип заняття
+                self.soft_constraints_score += 1  # Викладач не може проводити цей тип заняття
 
-        # Функціонал якості №1: Мінімізуємо кількість порушень
-        total_score = hard_constraints_violations * 1000 + soft_constraints_score  # Жорсткі обмеження важать більше
-        self.hard_constraints_violations = hard_constraints_violations  # Зберігаємо кількість порушень
-        return total_score
+        total_score = self.hard_constraints_violations * 1000 + self.soft_constraints_score
+        return total_score  # Повертаємо загальне значення обмежень
 
 
 # Функція для генерації початкової популяції розкладів
@@ -361,49 +346,96 @@ def can_swap_lecturers(event1, event2):
     return event1.lecturer_id != event2.lecturer_id
 
 
-# Генетичний алгоритм для оптимізації розкладу
+# Функція для оцінки м'яких обмежень
+def soft_constraints_fitness(schedule):
+    return schedule.soft_constraints_score
+
+
+# Функція для оцінки жорстких обмежень
+def hard_constraints_fitness(schedule):
+    return schedule.hard_constraints_violations
+
+
+# Функція для відбору популяції
+def select_from_population(population, fitness_function):
+    population.sort(key=fitness_function)  # Сортуємо за значенням функції оцінки
+    return population[:len(population) // 2] if len(population) > 1 else population  # Повертаємо половину найкращих
+
+
+# Функція для вибору N найкращих розкладів у популяції
+def select_top_n(population, fitness_function, n):
+    population.sort(key=fitness_function)
+    return population[:n]
+
+
+# Функція для схрещування двох розкладів
+def crossover(parent1, parent2):
+    # Створюємо копію батьківських розкладів
+    child1, child2 = copy.deepcopy(parent1), copy.deepcopy(parent2)
+    crossover_point = len(parent1.events) // 2
+
+    # Обмінюємо події на основі точки схрещування
+    child1.events[crossover_point:], child2.events[crossover_point:] = parent2.events[crossover_point:], parent1.events[
+                                                                                                         crossover_point:]
+    return child1, child2
+
+
+# Генетичний алгоритм з схрещуванням та вибором кількох елементів
 def genetic_algorithm(groups, subjects, lecturers, auditoriums, generations=100):
     global best_schedule
-    population_size = 50  # Фіксований розмір популяції
+    population_size = 50
+    n_best_to_select = 10  # Кількість найкращих розкладів, що обираються для наступного покоління
     population = generate_initial_population(population_size, groups, subjects, lecturers, auditoriums)
-    fitness_function = Schedule.fitness  # Використовуємо основну функцію оцінки
 
+    # Етап 1: Жорсткі обмеження
     for generation in range(generations):
-        # Оцінка популяції та відбір найкращих
-        population = select_population(population, groups, lecturers, auditoriums, fitness_function)
-        if not population:
-            print("Population is empty after the selection. Finishing the algorithm.")
-            break
-        best_schedule = population[0]
-        best_fitness = fitness_function(best_schedule, groups, lecturers, auditoriums)
-        print(f"Покоління: {generation + 1}, Найкраща пристосованість: {best_fitness}")
+        population = select_top_n(population, lambda sched: sched.hard_constraints_violations, n_best_to_select)
 
-        # Якщо досягли оптимального розкладу
-        if best_fitness == 0:
+        # Перевірка, чи знайдено розклад без порушень жорстких обмежень
+        if population[0].hard_constraints_violations == 0:
+            best_schedule = population[0]
+            print(f"Покоління: {generation + 1}, Найкращий розклад для жорстких обмежень знайдено.")
             break
+        else:
+            best_schedule = population[0]
 
+        # Схрещування між вибраними найкращими розкладами
         new_population = []
+        while len(new_population) < population_size:
+            parent1, parent2 = random.sample(population, 2)
+            child1, child2 = crossover(parent1, parent2)
+            new_population.extend([child1, child2])
 
-        # Реалізація "хижака"
-        population = predator_approach(population, groups, lecturers, auditoriums, fitness_function)
-
-        # Реалізація "травоїдного" згладжування
-        smoothed_population = herbivore_smoothing(population, best_schedule, lecturers, auditoriums)
-
-        # Реалізація "дощу"
-        rain_population = rain(len(population), groups, subjects, lecturers, auditoriums)
-
-        # Об'єднуємо всі популяції
-        new_population.extend(population)
-        new_population.extend(smoothed_population)
-        new_population.extend(rain_population)
-
-        # Мутація розкладів у новій популяції
+        # Мутація нової популяції
         for schedule in new_population:
             if random.random() < 0.3:
                 mutate(schedule, lecturers, auditoriums)
 
-        # Зберігаємо стабільний розмір популяції
-        population = new_population[:population_size]
+        population = new_population
+
+    # Етап 2: Оптимізація м'яких обмежень, зберігаючи жорсткі
+    for generation in range(generations):
+        population = select_top_n(population, lambda sched: sched.soft_constraints_score, n_best_to_select)
+        best_schedule = population[0]
+        best_fitness = best_schedule.soft_constraints_score
+
+        print(f"Покоління: {generation + 1}, Оптимізація м'яких обмежень, поточна найкраща оцінка: {best_fitness}")
+
+        if best_fitness == 0:
+            break
+
+        # Схрещування для оптимізації м'яких обмежень
+        new_population = []
+        while len(new_population) < population_size:
+            parent1, parent2 = random.sample(population, 2)
+            child1, child2 = crossover(parent1, parent2)
+            new_population.extend([child1, child2])
+
+        # Мутація нової популяції
+        for schedule in new_population:
+            if random.random() < 0.3:
+                mutate(schedule, lecturers, auditoriums)
+
+        population = new_population
 
     return best_schedule
